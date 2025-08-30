@@ -1,0 +1,55 @@
+img {
+    width: 200px;
+    height: 200px;
+    cursor: pointer;
+    border: none;
+    padding: 20px;
+}
+
+/*container para las 3 hojas*/
+.container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    align-items: center;
+}
+/*ejercicio 2*/
+.galeria-sticker {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.boton-ejercicio {
+    display: flex;
+    justify-content: center;
+}
+
+.boton-ejercicio a {
+    text-decoration: none;
+    padding: 20px;
+}
+/*ejercicio 3*/
+.btn3 {
+    width: 80px;
+    height: 40px;
+    border-radius: 6px;
+    padding: 10px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.btn-ingresar {
+    width: 100px;
+    height: 40px;
+    border-radius: 6px;
+    padding: 5px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.btn-ingresar:hover {
+    background-color: darkseagreen;
+}

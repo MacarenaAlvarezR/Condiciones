@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio </title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Elije tú sticker</h1>
+        <span>Puede ser con borde o sin borde, haciendo click en la imagen</span>
+        <img id="imgsticker" src="./assets/img/auto.jpg">
+    </div>
+    <div class="boton-ejercicio">
+        <button><a href="./ej2.html">Ejercicio 2</a></button>
+    </div>
+    <script>
+        const img = document.querySelector('#imgsticker');
+        img.addEventListener('click', function () {
+            // Si ya tiene borde, lo quitamos; si no, lo agregamos
+            if (this.style.border === '2px solid red') {
+                this.style.border = 'none';
+            } else {
+                this.style.border = '2px solid red';
+            }
+        });
+    </script>
+</body>
+
+</html>

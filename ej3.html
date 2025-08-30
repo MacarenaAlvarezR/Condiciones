@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 3</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body class="container">
+    <h2>Introduce el password usando los selectores</h2>
+    
+
+    <select id="sel1" class="btn3">
+        <option value="0">--</option>
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+        <option>6</option>
+        <option>7</option>
+        <option>8</option>
+        <option>9</option>
+    </select>
+    
+    <select id="sel2" class="btn3">
+        <option value="0">--</option>
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+        <option>6</option>
+        <option>7</option>
+        <option>8</option>
+        <option>9</option>
+    </select>
+    
+    <select id="sel3" class="btn3">
+        <option value="0">--</option>
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+        <option>6</option>
+        <option>7</option>
+        <option>8</option>
+        <option>9</option>
+    </select>
+    
+    <button id="btnIngresar" class="btn-ingresar">Ingresar</button>
+    
+    <p id="mensaje"></p>
+    
+    <script>
+
+        const sel1 = document.querySelector('#sel1');
+        const sel2 = document.querySelector('#sel2');
+        const sel3 = document.querySelector('#sel3');
+        const boton = document.querySelector('#btnIngresar');
+        const mensaje = document.querySelector('#mensaje');
+
+        boton.addEventListener('click', function () {
+            const v1 = sel1.value;
+            const v2 = sel2.value;
+            const v3 = sel3.value;
+            const pwd = v1 + v2 + v3;
+
+            if (pwd === "911") {
+                mensaje.textContent = "password 1 correcto"; 
+            } else if (pwd === "714") {
+                mensaje.textContent = "password 2 correcto"; 
+            } else {
+                mensaje.textContent = "password incorrecto"; 
+            }
+        });
+    </script>
+</body>
+</html>

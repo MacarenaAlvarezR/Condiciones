@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 2</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <h1>Elije tus sticker</h1>
+
+        <div class="galeria-sticker">
+
+            <img src="./assets/img/mood.jpg">
+            <input id="mood" type="number" min="0" value="0">
+
+            <img src="./assets/img/flor.png">
+            <input id="flor" type="number" min="0" value="0">
+
+            <img src="./assets/img/sonic.webp">
+            <input id="sonic" type="number" min="0" value="0">
+
+        </div>
+        <button id="calcular" style="width: 100px;
+        height: 40px;
+        margin: 10px; border-radius: 5px; cursor: pointer;">calcular stickers</button>
+        <p id="resultado"></p>
+    </div>
+    <div class="boton-ejercicio">
+        <button><a href="./ej3.html">Ejercicio 3</a></button>
+    </div>
+
+    <script>
+        const calcular = document.querySelector('#calcular').addEventListener('click', function () {
+            const s1 = parseInt(document.querySelector('#mood').value, 10) || 0;
+            const s2 = parseInt(document.querySelector('#flor').value, 10) || 0;
+            const s3 = parseInt(document.querySelector('#sonic').value, 10) || 0;
+
+            const suma = s1 + s2 + s3;
+
+            const resultadoP = document.querySelector('#resultado');
+            if (suma <= 10) {
+                resultadoP.innerHTML = 'Llevas $ ' + suma + ' stickers';
+            } else {
+                resultadoP.innerHTML = 'Llevas demasiados stickers';
+            }
+        });
+    </script>
+</body>
+
+</html>
